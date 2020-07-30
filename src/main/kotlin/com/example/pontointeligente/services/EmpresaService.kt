@@ -11,6 +11,6 @@ interface IEmpresaService {
 
 @Service
 class EmpresaService(val empresaRepository: EmpresaRepository) : IEmpresaService {
-    override fun buscarPorCnpj(cnpj: String): Empresa? = empresaRepository.findByCnpj(cnpj)
+    override fun buscarPorCnpj(cnpj: String): Empresa? = empresaRepository.findByCnpj(cnpj)?.fromModel()
     override fun persistir(empresa: Empresa): Empresa = empresaRepository.save(empresa)
 }

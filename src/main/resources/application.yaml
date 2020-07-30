@@ -1,0 +1,10 @@
+# Server Configuration
+server:
+  servlet:
+    context-path: /${PONTO_API_CONTEXT:api/v1}
+  port: ${PONTO_API_PORT:9091}
+
+# Spring Configuration
+spring:
+  application:
+    name: pontointeligente

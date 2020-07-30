@@ -1,0 +1,13 @@
+version: "3.5"
+
+services:
+  ponto-inteligente:
+    build: .
+    env_file:
+      - .env.dev
+    image: ponto-inteligente-api
+    volumes:
+      - .:/app
+    ports:
+      - 9095:9095
+    command: "java -jar app.jar"

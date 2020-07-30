@@ -8,4 +8,8 @@ data class Empresa(
         val razaoSocial: String,
         val cnpj: String,
         @Id val id: String? = null
-)
+) {
+    fun fromModel(): Empresa {
+        return Empresa(razaoSocial, cnpj, id)
+    }
+}
